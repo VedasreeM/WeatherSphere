@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>WeatherSphere</h1>
+            <p>Get current weather conditions for any location</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" id="locationInput" placeholder="Enter city name or use current location">
+                <button id="searchBtn">Search</button>
+                <button id="currentLocationBtn">Use Current Location</button>
+            </div>
+        </div>
+
+        <div class="weather-display" id="weatherDisplay">
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Loading weather data...</p>
+            </div>
+
+            <div class="weather-info" id="weatherInfo" style="display: none;">
+                <div class="location-info">
+                    <h2 id="locationName"></h2>
+                    <p id="currentTime"></p>
+                </div>
+
+                <div class="main-weather">
+                    <div class="weather-icon">
+                        <img id="weatherIcon" src="" alt="Weather Icon">
+                    </div>
+                    <div class="temperature">
+                        <span id="temperature"></span>
+                        <div class="temp-toggle">
+                            <button id="celsiusBtn" class="active">°C</button>
+                            <button id="fahrenheitBtn">°F</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weather-description">
+                    <h3 id="weatherDescription"></h3>
+                    <p id="feelsLike"></p>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span class="label">Humidity</span>
+                        <span class="value" id="humidity"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Wind Speed</span>
+                        <span class="value" id="windSpeed"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Pressure</span>
+                        <span class="value" id="pressure"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Visibility</span>
+                        <span class="value" id="visibility"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">UV Index</span>
+                        <span class="value" id="uvIndex"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Sunrise</span>
+                        <span class="value" id="sunrise"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Sunset</span>
+                        <span class="value" id="sunset"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="error-message" id="errorMessage" style="display: none;">
+                <h3>Oops! Something went wrong</h3>
+                <p id="errorText"></p>
+                <button id="retryBtn">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
